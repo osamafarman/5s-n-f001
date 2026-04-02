@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Çalışma Kağıdı - Ünite 3: Ailem</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Tajawal', 'Arial', sans-serif; background: #f5f0eb; color: #2d2d2d; direction: rtl; }
+
+  .cover {
+    background: linear-gradient(135deg, #e07b39 0%, #f5a623 50%, #e07b39 100%);
+    min-height: 100vh; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center; padding: 40px;
+    page-break-after: always;
+  }
+  .cover h1 { font-size: 44px; color: white; font-weight: 900; text-shadow: 2px 2px 8px rgba(0,0,0,0.3); margin-bottom: 8px; }
+  .cover h2 { font-size: 26px; color: #fff8f0; font-weight: 700; margin-bottom: 25px; }
+  .cover .school { background: rgba(255,255,255,0.2); border-radius: 20px; padding: 18px 40px; margin-bottom: 25px; }
+  .cover .school p { color: white; font-size: 16px; font-weight: 500; line-height: 2.1; }
+  .cover .topics { background: white; border-radius: 20px; padding: 28px 40px; max-width: 520px; }
+  .cover .topics h3 { color: #e07b39; font-size: 19px; margin-bottom: 14px; font-weight: 800; direction:ltr; }
+  .cover .topics ul { list-style: none; }
+  .cover .topics li { font-size: 15px; color: #333; padding: 7px 0; border-bottom: 1px solid #f0e0d0; direction: ltr; text-align: left; }
+  .cover .topics li:last-child { border: none; }
+  .cover .topics li::before { content: "✦ "; color: #e07b39; }
+
+  .page { background: white; max-width: 900px; margin: 30px auto; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.1); page-break-after: always; }
+  .page-header { background: linear-gradient(135deg, #e07b39, #f5a623); padding: 25px 35px; color: white; }
+  .page-header .q-number { background: rgba(255,255,255,0.3); display: inline-block; padding: 5px 20px; border-radius: 30px; font-size: 13px; margin-bottom: 8px; font-weight: 700; direction: ltr; }
+  .page-header h2 { font-size: 22px; font-weight: 900; direction: ltr; }
+  .page-header .points { font-size: 13px; color: #fff5e0; margin-top: 5px; direction: ltr; }
+  .page-body { padding: 35px; }
+
+  .explain-box { background: #fff8f0; border-right: 5px solid #e07b39; border-radius: 12px; padding: 20px 25px; margin-bottom: 25px; }
+  .explain-box h3 { color: #e07b39; font-size: 16px; margin-bottom: 10px; font-weight: 800; direction: ltr; text-align: left; }
+  .explain-box p { font-size: 15px; line-height: 1.9; color: #444; direction: ltr; text-align: left; }
+  .explain-box .highlight { color: #e07b39; font-weight: 700; }
+
+  .example-box { background: #f0f7ff; border: 2px dashed #4a90d9; border-radius: 12px; padding: 20px 25px; margin-bottom: 25px; }
+  .example-box h3 { color: #4a90d9; font-size: 15px; margin-bottom: 15px; font-weight: 800; direction: ltr; text-align: left; }
+  .example-row { display: flex; align-items: center; gap: 15px; background: white; border-radius: 10px; padding: 14px 18px; margin-bottom: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); direction: ltr; }
+  .q-side { flex: 1; color: #e07b39; font-weight: 700; font-size: 22px; direction: rtl; }
+  .arrow { color: #999; font-size: 20px; }
+  .a-side { flex: 1; color: #2a7a2a; font-weight: 700; font-size: 17px; direction: ltr; }
+
+  .rule-box { background: linear-gradient(135deg, #fff0f0, #fff8f0); border: 2px solid #e07b39; border-radius: 15px; padding: 20px 25px; margin-bottom: 25px; text-align: center; }
+  .rule-box h3 { color: #e07b39; font-size: 17px; font-weight: 900; margin-bottom: 12px; direction: ltr; }
+  .rule-box .formula { background: white; border-radius: 10px; padding: 12px 20px; font-size: 20px; font-weight: 900; color: #333; display: inline-block; box-shadow: 0 2px 8px rgba(0,0,0,0.1); direction: ltr; }
+  .rule-box p { margin-top: 10px; color: #666; font-size: 14px; direction: ltr; }
+
+  .tip-box { background: #e8f5e9; border-right: 4px solid #4caf50; border-radius: 10px; padding: 15px 20px; margin-bottom: 20px; }
+  .tip-box p { color: #2e7d32; font-size: 14px; font-weight: 600; direction: ltr; text-align: left; }
+
+  .vocab-section h3 { font-size: 16px; color: #333; font-weight: 800; margin-bottom: 15px; padding-right: 15px; border-right: 4px solid #e07b39; direction: rtl; }
+  table { width: 100%; border-collapse: collapse; margin-bottom: 25px; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.08); }
+  table thead tr { background: #e07b39; }
+  table thead th { color: white; padding: 12px 18px; font-size: 14px; font-weight: 700; }
+  table tbody tr:nth-child(even) { background: #fff8f0; }
+  table tbody tr:nth-child(odd) { background: white; }
+  table tbody td { padding: 11px 18px; font-size: 15px; border-bottom: 1px solid #f0e0d0; }
+  .arabic-cell { font-size: 21px; font-weight: 700; color: #333; direction: rtl; text-align: right; }
+  .turkish-cell { color: #555; direction: ltr; text-align: left; }
+  .note-cell { color: #e07b39; font-weight: 600; font-size: 12px; direction: ltr; text-align: left; }
+
+  .dialogue { background: #f8f8f8; border-radius: 15px; padding: 22px; margin-bottom: 25px; }
+  .dialogue h3 { color: #333; font-size: 15px; font-weight: 800; margin-bottom: 15px; direction: ltr; }
+  .dialogue-line { display: flex; gap: 12px; margin-bottom: 12px; align-items: flex-start; direction: ltr; }
+  .speaker { font-weight: 800; color: #e07b39; min-width: 45px; font-size: 15px; }
+  .speech { background: white; border-radius: 12px; padding: 10px 16px; flex: 1; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+  .speech .ar { font-size: 19px; font-weight: 700; color: #333; direction: rtl; }
+  .speech .tr { font-size: 12px; color: #888; margin-top: 4px; direction: ltr; }
+
+  .sample-answer { background: #f0fff4; border: 2px solid #81c784; border-radius: 15px; padding: 25px; margin-bottom: 20px; }
+  .sample-answer h3 { color: #2e7d32; font-size: 15px; font-weight: 800; margin-bottom: 18px; direction: ltr; }
+  .sample-qa { margin-bottom: 20px; padding-bottom: 18px; border-bottom: 1px dashed #b2dfdb; }
+  .sample-qa:last-child { border: none; margin-bottom: 0; }
+  .sample-q { font-size: 15px; color: #555; direction: rtl; text-align: right; margin-bottom: 8px; background: #e8f5e9; padding: 10px 15px; border-radius: 8px; font-weight: 600; }
+  .sample-q .tr-q { font-size: 12px; color: #888; direction: ltr; text-align: left; margin-top: 4px; }
+  .sample-a-ar { font-size: 24px; color: #1b5e20; font-weight: 800; direction: rtl; text-align: right; padding: 10px 15px; }
+  .sample-a-tr { font-size: 13px; color: #555; direction: ltr; text-align: left; padding: 0 15px 8px; }
+
+  .quiz-section { background: linear-gradient(135deg, #1a237e, #283593); border-radius: 15px; padding: 28px; margin-top: 30px; }
+  .quiz-section h2 { color: #ffd54f; font-size: 19px; font-weight: 900; margin-bottom: 4px; direction: ltr; }
+  .quiz-section .quiz-subtitle { color: #b0bec5; font-size: 13px; margin-bottom: 22px; direction: ltr; }
+  .quiz-q { background: rgba(255,255,255,0.08); border-radius: 12px; padding: 18px 22px; margin-bottom: 14px; border-right: 4px solid #ffd54f; }
+  .quiz-q .q-num { color: #ffd54f; font-size: 13px; font-weight: 800; margin-bottom: 7px; direction: ltr; }
+  .quiz-q .q-text { color: white; font-size: 20px; font-weight: 700; margin-bottom: 12px; direction: rtl; }
+  .quiz-q .q-text-ltr { color: white; font-size: 14px; font-weight: 500; margin-bottom: 12px; direction: ltr; }
+  .options { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .option { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; padding: 10px 14px; color: white; font-size: 16px; cursor: pointer; transition: all 0.2s; direction: rtl; }
+  .option:hover { background: rgba(255,213,79,0.2); border-color: #ffd54f; }
+  .option.correct { background: rgba(76,175,80,0.4); border-color: #81c784; }
+  .option.wrong { background: rgba(244,67,54,0.3); border-color: #e57373; }
+  .fill-blank { background: rgba(255,255,255,0.1); border: none; border-bottom: 2px solid #ffd54f; color: white; font-size: 18px; font-family: 'Tajawal', Arial, sans-serif; padding: 5px 10px; width: 220px; text-align: center; direction: rtl; outline: none; }
+  .fill-blank::placeholder { color: rgba(255,255,255,0.4); }
+  .show-answer { background: #ffd54f; color: #1a237e; border: none; border-radius: 8px; padding: 7px 14px; font-size: 12px; font-weight: 700; font-family: 'Tajawal', Arial, sans-serif; cursor: pointer; margin-top: 10px; }
+  .answer-reveal { display: none; background: rgba(76,175,80,0.2); border: 1px solid #81c784; border-radius: 8px; padding: 10px 14px; color: #a5d6a7; font-size: 17px; font-weight: 700; margin-top: 8px; direction: rtl; }
+  .answer-reveal.visible { display: block; }
+
+  .exam-section { background: #f9f9f9; border-radius: 15px; padding: 25px; margin-bottom: 20px; border: 1px solid #eee; }
+  .exam-section-header { background: #e07b39; color: white; padding: 12px 20px; border-radius: 10px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+  .exam-section-header h3 { font-size: 15px; font-weight: 800; direction: ltr; text-align: left; }
+  .exam-section-header .pts { background: rgba(255,255,255,0.25); padding: 4px 14px; border-radius: 20px; font-size: 13px; }
+  .gender-row { display: flex; align-items: center; gap: 20px; background: white; border-radius: 10px; padding: 12px 18px; margin-bottom: 10px; border: 1px solid #eee; direction: ltr; }
+  .gender-ar { font-size: 22px; font-weight: 700; flex: 1; text-align: center; direction: rtl; }
+  .gender-arrow { color: #999; font-size: 22px; }
+  .gender-blank { flex: 1; border-bottom: 2px solid #e07b39; height: 35px; }
+  .answer-line { border-bottom: 1.5px solid #ccc; height: 38px; margin-bottom: 8px; width: 100%; display: block; }
+  .dialogue-blank { display: inline-block; border-bottom: 2px solid #e07b39; width: 230px; height: 28px; vertical-align: bottom; }
+  .student-info { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; margin-bottom: 28px; }
+  .info-field { border-bottom: 2px solid #333; padding-bottom: 8px; }
+  .info-field label { font-size: 12px; color: #666; display: block; margin-bottom: 5px; direction: ltr; }
+  .score-table { width: 100%; border-collapse: collapse; margin-top: 22px; }
+  .score-table th, .score-table td { border: 1px solid #ddd; padding: 9px; text-align: center; font-size: 13px; }
+  .score-table th { background: #e07b39; color: white; }
+  .answer-key { background: #e8f5e9; border-radius: 15px; padding: 25px; margin-top: 25px; border: 2px solid #81c784; }
+  .answer-key h2 { color: #2e7d32; font-size: 19px; font-weight: 900; margin-bottom: 18px; direction: ltr; }
+  .answer-key .ans-section { margin-bottom: 14px; }
+  .answer-key .ans-section h4 { color: #388e3c; font-size: 14px; font-weight: 800; margin-bottom: 7px; direction: ltr; }
+  .answer-key .ans-item { font-size: 15px; color: #333; margin-bottom: 5px; direction: ltr; }
+  .match-area { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .match-word { font-size: 22px; font-weight: 700; direction: rtl; text-align: center; background: #fff8f0; border: 1px solid #f0c070; border-radius: 8px; padding: 12px; margin-bottom: 12px; }
+  .match-tr { font-size: 16px; color: #555; direction: ltr; text-align: left; border-bottom: 1px solid #eee; padding: 14px 5px; }
+
+  @media screen { .main-wrapper { max-width: 960px; margin: 0 auto; padding: 20px; } }
+  @media print { body { background: white; } .page { box-shadow: none; margin: 0; border-radius: 0; } }
+</style>
+</head>
+<body>
+<div class="main-wrapper">
+
+<!-- COVER -->
+<div class="cover">
+  <h1>📚 Çalışma Kağıdı</h1>
+  <h2>الوحدة 3 — عائِلَتي</h2>
+  <div class="school">
+    <p>Mehmet Akif İnan İmam Hatip Ortaokulu</p>
+    <p>5. Sınıf — 2. Dönem &nbsp;|&nbsp; 2025 – 2026</p>
+  </div>
+  <div class="topics">
+    <h3>İçindekiler</h3>
+    <ul>
+      <li>Soru 1 — Eşleştirme (20 puan)</li>
+      <li>Soru 2 — Eril / Dişil Dönüşümü (30 puan)</li>
+      <li>Soru 3 — Türkçeye Çeviri (10 puan)</li>
+      <li>Soru 4 — Diyalog Tamamlama (20 puan)</li>
+      <li>Soru 5 — Arapça Tam Cevap (20 puan)</li>
+      <li>🎯 Kapsamlı Deneme Sınavı</li>
+    </ul>
+  </div>
+</div>
+
+<!-- SORU 1 -->
+<div class="page">
+  <div class="page-header">
+    <div class="q-number">Soru 1 — السؤال الأول</div>
+    <h2>🔗 Aile Kelimelerini Türkçe Anlamlarıyla Eşleştirme</h2>
+    <div class="points">20 puan — 4 kelime × 5 puan</div>
+  </div>
+  <div class="page-body">
+
+    <div class="explain-box">
+      <h3>📌 Soru nasıl gelecek?</h3>
+      <p>Birinci sütunda bir <span class="highlight">Arapça kelime</span>, üçüncü sütunda ise <span class="highlight">Türkçe anlamı</span> verilecek. Ortadaki sütuna doğru Türkçe karşılığını yazman istenecek.</p>
+    </div>
+
+    <div class="example-box">
+      <h3>✏️ Sorunun Şekli — Tek Örnek:</h3>
+      <div class="example-row">
+        <div class="q-side">أَبٌ</div>
+        <div class="arrow">←</div>
+        <div class="a-side">Baba</div>
+      </div>
+    </div>
+
+    <div class="vocab-section">
+      <h3>📖 Ezberlenmesi Gereken Kelimeler — Aile Bireyleri</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Arapça Kelime</th>
+            <th>Türkçe Anlamı</th>
+            <th>Not</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="arabic-cell">أَبٌ</td><td class="turkish-cell">Baba (genel)</td><td class="note-cell">Genel — belirli biri değil</td></tr>
+          <tr><td class="arabic-cell">أَبي</td><td class="turkish-cell">Babam</td><td class="note-cell">ي eklince = benim babam</td></tr>
+          <tr><td class="arabic-cell">أُمٌّ</td><td class="turkish-cell">Anne (genel)</td><td class="note-cell">Genel</td></tr>
+          <tr><td class="arabic-cell">أُمِّي</td><td class="turkish-cell">Annem</td><td class="note-cell">ي eklince = benim annem</td></tr>
+          <tr><td class="arabic-cell">أَخٌ</td><td class="turkish-cell">Erkek kardeş (genel)</td><td class="note-cell">Genel</td></tr>
+          <tr><td class="arabic-cell">أَخي</td><td class="turkish-cell">Erkek kardeşim</td><td class="note-cell">ي eklince = benim erkek kardeşim</td></tr>
+          <tr><td class="arabic-cell">أُخْتٌ</td><td class="turkish-cell">Kız kardeş (genel)</td><td class="note-cell">Genel</td></tr>
+          <tr><td class="arabic-cell">أُخْتي</td><td class="turkish-cell">Kız kardeşim</td><td class="note-cell">ي eklince = benim kız kardeşim</td></tr>
+          <tr><td class="arabic-cell">وَلَد</td><td class="turkish-cell">Oğul / Erkek çocuk</td><td class="note-cell"></td></tr>
+          <tr><td class="arabic-cell">بِنْت</td><td class="turkish-cell">Kız / Kız çocuk</td><td class="note-cell"></td></tr>
+          <tr><td class="arabic-cell">عائِلَة</td><td class="turkish-cell">Aile</td><td class="note-cell"></td></tr>
+          <tr><td class="arabic-cell">الكَبير / الكَبيرَة</td><td class="turkish-cell">Büyük (erkek / kadın)</td><td class="note-cell">ة harfi kadın için eklenir</td></tr>
+          <tr><td class="arabic-cell">الصَّغير / الصَّغيرَة</td><td class="turkish-cell">Küçük (erkek / kadın)</td><td class="note-cell">ة harfi kadın için eklenir</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="rule-box">
+      <h3>⭐ Altın Kural — ي (ya) harfi sahiplik bildirir</h3>
+      <div class="formula">ي olmadan = genel &nbsp;|&nbsp; ي ile biter = benim (sahiplik)</div>
+      <p>أَخٌ = erkek kardeş &nbsp;|&nbsp; أَخي = erkek kardeşim</p>
+    </div>
+
+    <div class="quiz-section">
+      <h2>🎯 1. Soru Alıştırması</h2>
+      <div class="quiz-subtitle">Doğru cevabı seç veya boşluğa yaz</div>
+      <div class="quiz-q">
+        <div class="q-num">1</div>
+        <div class="q-text-ltr">"أُمِّي" kelimesinin Türkçe anlamı nedir?</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'wrong')">Anne (genel)</div>
+          <div class="option" onclick="checkOption(this,'correct')">Annem</div>
+          <div class="option" onclick="checkOption(this,'wrong')">Kız kardeşim</div>
+          <div class="option" onclick="checkOption(this,'wrong')">Babam</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">2</div>
+        <div class="q-text-ltr">"Kız kardeş" Arapçada ne demektir?</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'wrong')">أَخٌ</div>
+          <div class="option" onclick="checkOption(this,'wrong')">أُخْتي</div>
+          <div class="option" onclick="checkOption(this,'correct')">أُخْتٌ</div>
+          <div class="option" onclick="checkOption(this,'wrong')">أَبٌ</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">3</div>
+        <div class="q-text-ltr">"أَخٌ" kelimesinin Türkçe anlamını yaz:<br>
+          <input class="fill-blank" placeholder="...">
+          <br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button>
+          <div class="answer-reveal">✅ Erkek kardeş (genel)</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">4</div>
+        <div class="q-text-ltr">"أَبٌ" ile "أَبي" arasındaki fark nedir?</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'wrong')">Hiç fark yok</div>
+          <div class="option" onclick="checkOption(this,'correct')">أَبٌ genel, أَبي = babam (sahiplik)</div>
+          <div class="option" onclick="checkOption(this,'wrong')">أَبي erkek kardeş demek</div>
+          <div class="option" onclick="checkOption(this,'wrong')">İkisi de aynı</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">5</div>
+        <div class="q-text-ltr">"وَلَد" kelimesinin Türkçe anlamını yaz:<br>
+          <input class="fill-blank" placeholder="...">
+          <br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button>
+          <div class="answer-reveal">✅ Oğul / Erkek çocuk</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SORU 2 -->
+<div class="page">
+  <div class="page-header">
+    <div class="q-number">Soru 2 — السؤال الثاني</div>
+    <h2>⚖️ Meslekleri Eril ↔ Dişil Dönüştürme</h2>
+    <div class="points">30 puan — 6 kelime × 5 puan</div>
+  </div>
+  <div class="page-body">
+    <div class="explain-box">
+      <h3>📌 Soru nasıl gelecek?</h3>
+      <p>Tabloda bir meslek kelimesi verilecek. Bu kelime ya <span class="highlight">eril (مذكر / erkek için)</span> ya da <span class="highlight">dişil (مؤنث / kadın için)</span> olacak. Senin görevin karşısına zıt olanı yazmak.</p>
+      <br>
+      <p>👉 Eğer eril verilmişse → dişilini yaz &nbsp;&nbsp;|&nbsp;&nbsp; Eğer dişil verilmişse → erilini yaz</p>
+    </div>
+    <div class="rule-box">
+      <h3>⭐ En Önemli Kural — Dişil (Müennes) Yapımı</h3>
+      <div class="formula">Eril + ة = Dişil</div>
+      <p>Eril kelimenin sonuna (ة) harfi eklenerek dişil yapılır.</p>
+      <p style="margin-top:8px;">مُعَلِّم + ة = مُعَلِّمَة &nbsp;&nbsp;|&nbsp;&nbsp; طَبيب + ة = طَبيبَة</p>
+    </div>
+    <div class="vocab-section">
+      <h3>📖 Tüm Meslekler — Eril ve Dişil</h3>
+      <table>
+        <thead><tr><th>Eril — مُذَكَّر (Erkek)</th><th>Dişil — مُؤَنَّث (Kadın)</th><th>Türkçe Anlamı</th></tr></thead>
+        <tbody>
+          <tr><td class="arabic-cell">مُعَلِّم</td><td class="arabic-cell">مُعَلِّمَة</td><td class="turkish-cell">Öğretmen</td></tr>
+          <tr><td class="arabic-cell">مُهَنْدِس</td><td class="arabic-cell">مُهَنْدِسَة</td><td class="turkish-cell">Mühendis</td></tr>
+          <tr><td class="arabic-cell">طَبيب</td><td class="arabic-cell">طَبيبَة</td><td class="turkish-cell">Doktor</td></tr>
+          <tr><td class="arabic-cell">تاجِر</td><td class="arabic-cell">تاجِرَة</td><td class="turkish-cell">Tüccar</td></tr>
+          <tr><td class="arabic-cell">مُتَقاعِد</td><td class="arabic-cell">مُتَقاعِدَة</td><td class="turkish-cell">Emekli</td></tr>
+          <tr><td class="arabic-cell">عامِل</td><td class="arabic-cell">عامِلَة</td><td class="turkish-cell">İşçi</td></tr>
+          <tr><td class="arabic-cell">مُوَظَّف</td><td class="arabic-cell">مُوَظَّفَة</td><td class="turkish-cell">Memur</td></tr>
+          <tr><td class="arabic-cell">طالِب</td><td class="arabic-cell">طالِبَة</td><td class="turkish-cell">Öğrenci</td></tr>
+          <tr><td class="arabic-cell">صَديق</td><td class="arabic-cell">صَديقَة</td><td class="turkish-cell">Arkadaş</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip-box">
+      <p>💡 İpucu: Kural çok basit! Tüm mesleklere sonunda (ة) ekleyerek dişil yapılıyor. مُعَلِّم → مُعَلِّمَة &nbsp;|&nbsp; طَبيب → طَبيبَة</p>
+    </div>
+    <div class="quiz-section">
+      <h2>🎯 2. Soru Alıştırması</h2>
+      <div class="quiz-subtitle">Kelimeyi zıt cinsine dönüştür</div>
+      <div class="quiz-q"><div class="q-num">1</div><div class="q-text-ltr">مُتَقاعِد → Dişil: <input class="fill-blank" placeholder="..."><br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button><div class="answer-reveal">✅ مُتَقاعِدَة</div></div></div>
+      <div class="quiz-q"><div class="q-num">2</div><div class="q-text-ltr">مُعَلِّمَة → Eril: <input class="fill-blank" placeholder="..."><br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button><div class="answer-reveal">✅ مُعَلِّم</div></div></div>
+      <div class="quiz-q">
+        <div class="q-num">3</div>
+        <div class="q-text-ltr">"تاجِر" kelimesinin dişili nedir?</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'wrong')">تاجِر</div>
+          <div class="option" onclick="checkOption(this,'correct')">تاجِرَة</div>
+          <div class="option" onclick="checkOption(this,'wrong')">تاجِري</div>
+          <div class="option" onclick="checkOption(this,'wrong')">تاجِرون</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">4</div>
+        <div class="q-text-ltr">"طَبيبَة" kelimesinin erili nedir?</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'correct')">طَبيب</div>
+          <div class="option" onclick="checkOption(this,'wrong')">طَبيبَة</div>
+          <div class="option" onclick="checkOption(this,'wrong')">طَبيبات</div>
+          <div class="option" onclick="checkOption(this,'wrong')">طَبيبي</div>
+        </div>
+      </div>
+      <div class="quiz-q"><div class="q-num">5</div><div class="q-text-ltr">عامِلَة → Eril: <input class="fill-blank" placeholder="..."><br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button><div class="answer-reveal">✅ عامِل</div></div></div>
+      <div class="quiz-q"><div class="q-num">6</div><div class="q-text-ltr">مُوَظَّف → Dişil: <input class="fill-blank" placeholder="..."><br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button><div class="answer-reveal">✅ مُوَظَّفَة</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SORU 3 -->
+<div class="page">
+  <div class="page-header">
+    <div class="q-number">Soru 3 — السؤال الثالث</div>
+    <h2>🌐 Cümleyi Türkçeye Çevirme</h2>
+    <div class="points">10 puan</div>
+  </div>
+  <div class="page-body">
+    <div class="explain-box">
+      <h3>📌 Soru nasıl gelecek?</h3>
+      <p>Sana <span class="highlight">bir Arapça cümle</span> verilecek. Cümle genellikle bir aile üyesinden ve mesleğinden bahsedecek. Senin görevin bu cümleyi <span class="highlight">Türkçeye çevirmek</span>.</p>
+      <br>
+      <p>Cümle genellikle şu kalıpla gelir: &nbsp;<span class="highlight">أَخي / أَبي / أُمِّي + meslek</span></p>
+    </div>
+
+    <div class="vocab-section">
+      <h3>📖 Çeviride Kullanılan Anahtar Kelimeler</h3>
+      <table>
+        <thead><tr><th>Arapça</th><th>Türkçe</th></tr></thead>
+        <tbody>
+          <tr><td class="arabic-cell">أَبي</td><td class="turkish-cell">Babam</td></tr>
+          <tr><td class="arabic-cell">أُمِّي</td><td class="turkish-cell">Annem</td></tr>
+          <tr><td class="arabic-cell">أَخي</td><td class="turkish-cell">Erkek kardeşim</td></tr>
+          <tr><td class="arabic-cell">هُوَ</td><td class="turkish-cell">O (erkek)</td></tr>
+          <tr><td class="arabic-cell">هِيَ</td><td class="turkish-cell">O (kadın)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="example-box">
+      <h3>✏️ Bu 3 Cümleyi İyi Ezberle! — Sınavda Bunlar Gelecek</h3>
+
+      <div style="background:white; border-radius:12px; padding:18px 22px; margin-bottom:12px; direction:ltr; border-left:4px solid #e07b39;">
+        <div style="font-size:26px; font-weight:800; direction:rtl; color:#333; margin-bottom:10px; border-bottom:1px solid #f0e0d0; padding-bottom:10px;">أَخي طَبيب.</div>
+        <div style="font-size:18px; color:#2a7a2a; font-weight:700;">Erkek kardeşim doktordur.</div>
+      </div>
+
+      <div style="background:white; border-radius:12px; padding:18px 22px; margin-bottom:12px; direction:ltr; border-left:4px solid #e07b39;">
+        <div style="font-size:26px; font-weight:800; direction:rtl; color:#333; margin-bottom:10px; border-bottom:1px solid #f0e0d0; padding-bottom:10px;">أَبي مُعَلِّم.</div>
+        <div style="font-size:18px; color:#2a7a2a; font-weight:700;">Babam öğretmendir.</div>
+      </div>
+
+      <div style="background:white; border-radius:12px; padding:18px 22px; direction:ltr; border-left:4px solid #e07b39;">
+        <div style="font-size:26px; font-weight:800; direction:rtl; color:#333; margin-bottom:10px; border-bottom:1px solid #f0e0d0; padding-bottom:10px;">أُمِّي مُعَلِّمَة.</div>
+        <div style="font-size:18px; color:#2a7a2a; font-weight:700;">Annem öğretmendir.</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <p>💡 İpucu: [Aile üyesi] + [Meslek] = [Aile üyesi] + [Meslek] + dir/tir &nbsp;|&nbsp; Çok basit bir yapı!</p>
+    </div>
+
+    <div class="quiz-section">
+      <h2>🎯 3. Soru Alıştırması</h2>
+      <div class="quiz-subtitle">Arapça cümleyi Türkçeye çevir</div>
+      <div class="quiz-q"><div class="q-num">1</div><div class="q-text">أَخي مُهَنْدِس.</div><div class="q-text-ltr">Türkçe: <input class="fill-blank" placeholder="..." style="width:350px"><br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button><div class="answer-reveal">✅ Erkek kardeşim mühendistir.</div></div></div>
+      <div class="quiz-q"><div class="q-num">2</div><div class="q-text">أُمِّي طَبيبَة.</div><div class="q-text-ltr">Türkçe: <input class="fill-blank" placeholder="..." style="width:350px"><br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button><div class="answer-reveal">✅ Annem doktordur.</div></div></div>
+      <div class="quiz-q"><div class="q-num">3</div><div class="q-text">أَبي مُتَقاعِد.</div><div class="q-text-ltr">Türkçe: <input class="fill-blank" placeholder="..." style="width:350px"><br><button class="show-answer" onclick="revealAnswer(this)">Cevabı Göster</button><div class="answer-reveal">✅ Babam emeklidir.</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- SORU 4 -->
+<div class="page">
+  <div class="page-header">
+    <div class="q-number">Soru 4 — السؤال الرابع</div>
+    <h2>💬 Diyalogu Uygun Soruyla Tamamlama</h2>
+    <div class="points">20 puan — 2 soru × 10 puan</div>
+  </div>
+  <div class="page-body">
+    <div class="explain-box">
+      <h3>📌 Soru nasıl gelecek?</h3>
+      <p>İki kişi arasında bir diyalog verilecek. (B) kişisinin cevabını göreceksin ve sen (A) kişisinin sorusunu verilen listeden seçip boşluğa yazacaksın.</p>
+      <br>
+      <p>Seçenekler şunlar olacak:</p>
+      <p style="direction:rtl; font-size:19px; font-weight:800; color:#e07b39; margin-top:10px; background:#fff8f0; padding:10px 15px; border-radius:8px;">ما اسْمُهُ &nbsp;/&nbsp; ما اسْمُها &nbsp;/&nbsp; ما مِهْنَتُهُ &nbsp;/&nbsp; ما مِهْنَتُها</p>
+    </div>
+    <div class="vocab-section">
+      <h3>📖 4 Soru — İyi Ezberle!</h3>
+      <table>
+        <thead><tr><th>Arapça Soru</th><th>Türkçe Anlamı</th><th>Ne Zaman?</th></tr></thead>
+        <tbody>
+          <tr><td class="arabic-cell">ما اسْمُهُ؟</td><td class="turkish-cell">Onun adı ne? (erkek)</td><td class="note-cell">Erkek için isim sorarken</td></tr>
+          <tr><td class="arabic-cell">ما اسْمُها؟</td><td class="turkish-cell">Onun adı ne? (kadın)</td><td class="note-cell">Kadın için isim sorarken</td></tr>
+          <tr><td class="arabic-cell">ما مِهْنَتُهُ؟</td><td class="turkish-cell">Onun mesleği ne? (erkek)</td><td class="note-cell">Erkek için meslek sorarken</td></tr>
+          <tr><td class="arabic-cell">ما مِهْنَتُها؟</td><td class="turkish-cell">Onun mesleği ne? (kadın)</td><td class="note-cell">Kadın için meslek sorarken</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="rule-box">
+      <h3>⭐ Kolayca Ayırt Etme Yöntemi</h3>
+      <div class="formula">هُ (hu) = erkek &nbsp;|&nbsp; ها (ha) = kadın</div>
+      <p>Cevaba bak: Erkek ismi veya mesleği → هُ kullan &nbsp;|&nbsp; Kadın ismi veya mesleği → ها kullan</p>
+    </div>
+    <div class="example-box">
+      <h3>✏️ Kitaptan Diyalog Örneği:</h3>
+      <div class="dialogue">
+        <div class="dialogue-line"><div class="speaker">خ:</div><div class="speech"><div class="ar">ما اسْمُهُ؟</div><div class="tr">Onun adı ne? (erkek için)</div></div></div>
+        <div class="dialogue-line"><div class="speaker">ب:</div><div class="speech"><div class="ar">اسْمُهُ فاروق.</div><div class="tr">Onun adı Faruk.</div></div></div>
+        <div class="dialogue-line"><div class="speaker">خ:</div><div class="speech"><div class="ar">ما مِهْنَتُهُ؟</div><div class="tr">Onun mesleği ne? (erkek için)</div></div></div>
+        <div class="dialogue-line"><div class="speaker">ب:</div><div class="speech"><div class="ar">هُوَ عامِل.</div><div class="tr">O bir işçi.</div></div></div>
+      </div>
+    </div>
+    <div class="quiz-section">
+      <h2>🎯 4. Soru Alıştırması</h2>
+      <div class="quiz-subtitle">Listeden uygun soruyu seç</div>
+      <div class="quiz-q">
+        <div class="q-num">1</div>
+        <div class="q-text-ltr">A: ........................؟</div>
+        <div class="q-text">ب: اسْمُهُ أَحْمَد.</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'correct')">ما اسْمُهُ؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما اسْمُها؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما مِهْنَتُهُ؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما مِهْنَتُها؟</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">2</div>
+        <div class="q-text-ltr">A: ........................؟</div>
+        <div class="q-text">ب: مِهْنَتُها مُعَلِّمَة.</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'wrong')">ما اسْمُهُ؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما مِهْنَتُهُ؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما اسْمُها؟</div>
+          <div class="option" onclick="checkOption(this,'correct')">ما مِهْنَتُها؟</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">3</div>
+        <div class="q-text-ltr">A: ........................؟</div>
+        <div class="q-text">ب: اسْمُها زَيْنَب.</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'wrong')">ما اسْمُهُ؟</div>
+          <div class="option" onclick="checkOption(this,'correct')">ما اسْمُها؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما مِهْنَتُهُ؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما مِهْنَتُها؟</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">4</div>
+        <div class="q-text-ltr">A: ........................؟</div>
+        <div class="q-text">ب: هُوَ مُتَقاعِد.</div>
+        <div class="options">
+          <div class="option" onclick="checkOption(this,'wrong')">ما اسْمُها؟</div>
+          <div class="option" onclick="checkOption(this,'correct')">ما مِهْنَتُهُ؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما مِهْنَتُها؟</div>
+          <div class="option" onclick="checkOption(this,'wrong')">ما اسْمُهُ؟</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SORU 5 -->
+<div class="page">
+  <div class="page-header">
+    <div class="q-number">Soru 5 — السؤال الخامس</div>
+    <h2>✍️ Arapça Tam Cümleyle Kendin Hakkında Cevap Verme</h2>
+    <div class="points">20 puan</div>
+  </div>
+  <div class="page-body">
+    <div class="explain-box">
+      <h3>📌 Soru nasıl gelecek?</h3>
+      <p>Sana şu <span class="highlight">iki soru</span> sorulacak ve her birine <span class="highlight">Arapça tam cümleyle</span> cevap vermen istenecek:</p>
+      <br>
+      <div style="direction:rtl; margin:10px 0; padding:12px 18px; background:#fff0e0; border-radius:10px; font-size:20px; font-weight:700; color:#333;">
+        ما اسْمُ أَبيكَ وما مِهْنَتُهُ؟
+        <div style="font-size:13px; color:#888; font-weight:400; direction:ltr; margin-top:4px;">Babanın adı ne ve mesleği ne?</div>
+      </div>
+      <div style="direction:rtl; padding:12px 18px; background:#fff0e0; border-radius:10px; font-size:20px; font-weight:700; color:#333;">
+        ما اسْمُ أُمِّكَ وما مِهْنَتُها؟
+        <div style="font-size:13px; color:#888; font-weight:400; direction:ltr; margin-top:4px;">Annenin adı ne ve mesleği ne?</div>
+      </div>
+    </div>
+
+    <div class="sample-answer">
+      <h3>✅ Model Cevaplar — Bu kalıpları ezberle! Sadece isim ve meslek değişecek.</h3>
+
+      <div class="sample-qa">
+        <div class="sample-q">
+          ما اسْمُ أَبيكَ وما مِهْنَتُهُ؟
+          <div class="tr-q">Babanın adı ne ve mesleği ne?</div>
+        </div>
+        <div class="sample-a-ar">اسْمُهُ أَحْمَد. هُوَ مُعَلِّم.</div>
+        <div class="sample-a-tr">Onun adı Ahmet. O bir öğretmendir.</div>
+      </div>
+
+      <div class="sample-qa">
+        <div class="sample-q">
+          ما اسْمُ أُمِّكَ وما مِهْنَتُها؟
+          <div class="tr-q">Annenin adı ne ve mesleği ne?</div>
+        </div>
+        <div class="sample-a-ar">اسْمُها زَيْنَب. هِيَ مُعَلِّمَة.</div>
+        <div class="sample-a-tr">Onun adı Zeynep. O bir öğretmendir.</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <p>💡 Kendi cevabını da yazabilirsin! Babanın veya annenin gerçek adını ve mesleğini kullan. Kalıp aynı, sadece isim ve meslek değişiyor. Örneğin: اسْمُهُ مُحَمَّد. هُوَ طَبيب.</p>
+    </div>
+
+    <div class="vocab-section">
+      <h3>📖 Cevap Kalıpları — Hangi Mesleği Kullanacaksın?</h3>
+      <table>
+        <thead><tr><th>Arapça Kalıp</th><th>Türkçe Anlamı</th></tr></thead>
+        <tbody>
+          <tr><td class="arabic-cell">اسْمُهُ ________</td><td class="turkish-cell">Onun adı ________ (erkek için)</td></tr>
+          <tr><td class="arabic-cell">اسْمُها ________</td><td class="turkish-cell">Onun adı ________ (kadın için)</td></tr>
+          <tr><td class="arabic-cell">هُوَ مُعَلِّم</td><td class="turkish-cell">O bir öğretmendir (erkek)</td></tr>
+          <tr><td class="arabic-cell">هِيَ مُعَلِّمَة</td><td class="turkish-cell">O bir öğretmendir (kadın)</td></tr>
+          <tr><td class="arabic-cell">هُوَ مُهَنْدِس</td><td class="turkish-cell">O bir mühendistir</td></tr>
+          <tr><td class="arabic-cell">هِيَ رَبَّةُ البَيْت</td><td class="turkish-cell">O bir ev hanımıdır</td></tr>
+          <tr><td class="arabic-cell">هُوَ طَبيب</td><td class="turkish-cell">O bir doktordur</td></tr>
+          <tr><td class="arabic-cell">هُوَ مُتَقاعِد</td><td class="turkish-cell">O emeklidir</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="quiz-section">
+      <h2>🎯 5. Soru Alıştırması</h2>
+      <div class="quiz-subtitle">Model cevabı yaz, sonra kendi cevabını oluştur</div>
+      <div class="quiz-q">
+        <div class="q-num">1</div>
+        <div class="q-text">ما اسْمُ أَبيكَ وما مِهْنَتُهُ؟</div>
+        <div class="q-text-ltr">Model cevabı yaz:<br>
+          <input class="fill-blank" placeholder="اسْمُهُ ..." style="width:380px">
+          <br><button class="show-answer" onclick="revealAnswer(this)">Model Cevabı Göster</button>
+          <div class="answer-reveal">✅ اسْمُهُ أَحْمَد. هُوَ مُعَلِّم.</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">2</div>
+        <div class="q-text">ما اسْمُ أُمِّكَ وما مِهْنَتُها؟</div>
+        <div class="q-text-ltr">Model cevabı yaz:<br>
+          <input class="fill-blank" placeholder="اسْمُها ..." style="width:380px">
+          <br><button class="show-answer" onclick="revealAnswer(this)">Model Cevabı Göster</button>
+          <div class="answer-reveal">✅ اسْمُها زَيْنَب. هِيَ مُعَلِّمَة.</div>
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">3</div>
+        <div class="q-text-ltr">Şimdi kendi babanın adını ve mesleğini yaz:<br>
+          <input class="fill-blank" placeholder="اسْمُهُ ..." style="width:100%; display:block; margin-bottom:10px; margin-top:8px">
+        </div>
+      </div>
+      <div class="quiz-q">
+        <div class="q-num">4</div>
+        <div class="q-text-ltr">Şimdi kendi annenin adını ve mesleğini yaz:<br>
+          <input class="fill-blank" placeholder="اسْمُها ..." style="width:100%; display:block; margin-top:8px">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- DENEME SINAVI -->
+<div class="page">
+  <div class="page-header" style="background: linear-gradient(135deg, #1b5e20, #2e7d32);">
+    <div class="q-number" style="background:rgba(255,255,255,0.2);">Deneme Sınavı</div>
+    <h2>🎓 Kapsamlı Deneme Sınavı — الوحدة 3: عائلتي</h2>
+    <div class="points">Toplam: 100 puan | Süre: 30 dakika</div>
+  </div>
+  <div class="page-body">
+    <div class="student-info">
+      <div class="info-field"><label>Adı ve Soyadı / الاسم:</label></div>
+      <div class="info-field"><label>Okul Numarası / الرقم:</label></div>
+      <div class="info-field"><label>Şube / الشعبة:</label></div>
+    </div>
+
+    <div class="exam-section">
+      <div class="exam-section-header">
+        <h3>Soru 1 — Kelimeleri Türkçe Anlamlarıyla Eşleştir</h3>
+        <span class="pts">20 puan</span>
+      </div>
+      <p style="margin-bottom:18px; color:#666; font-size:13px; direction:ltr;">Arapça kelimeyi karşısındaki doğru Türkçe anlamıyla bir çizgiyle birleştir.</p>
+      <div class="match-area">
+        <div>
+          <div class="match-word">أَبٌ</div>
+          <div class="match-word">أُمٌّ</div>
+          <div class="match-word">أَخٌ</div>
+          <div class="match-word">أُخْتٌ</div>
+        </div>
+        <div style="direction:ltr; padding-top:10px;">
+          <div class="match-tr">Erkek kardeş</div>
+          <div class="match-tr">Baba</div>
+          <div class="match-tr">Kız kardeş</div>
+          <div class="match-tr">Anne</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exam-section">
+      <div class="exam-section-header">
+        <h3>Soru 2 — Her Kelimeyi Karşı Cinsine Dönüştür</h3>
+        <span class="pts">30 puan</span>
+      </div>
+      <p style="margin-bottom:18px; color:#666; font-size:13px; direction:ltr;">Eril ise dişilini, dişil ise erilini yaz.</p>
+      <div class="gender-row"><div class="gender-ar">مُهَنْدِسَة</div><div class="gender-arrow">⇄</div><div class="gender-blank"></div></div>
+      <div class="gender-row"><div class="gender-ar">مُعَلِّم</div><div class="gender-arrow">⇄</div><div class="gender-blank"></div></div>
+      <div class="gender-row"><div class="gender-ar">مُتَقاعِد</div><div class="gender-arrow">⇄</div><div class="gender-blank"></div></div>
+      <div class="gender-row"><div class="gender-ar">طَبيبَة</div><div class="gender-arrow">⇄</div><div class="gender-blank"></div></div>
+      <div class="gender-row"><div class="gender-ar">تاجِر</div><div class="gender-arrow">⇄</div><div class="gender-blank"></div></div>
+      <div class="gender-row"><div class="gender-ar">مُوَظَّفَة</div><div class="gender-arrow">⇄</div><div class="gender-blank"></div></div>
+    </div>
+
+    <div class="exam-section">
+      <div class="exam-section-header">
+        <h3>Soru 3 — Cümleyi Türkçeye Çevir</h3>
+        <span class="pts">10 puan</span>
+      </div>
+      <div style="font-size:26px; font-weight:800; text-align:center; padding:22px; background:#fff8f0; border-radius:10px; margin-bottom:18px; direction:rtl;">
+        أَبي مُعَلِّم.
+      </div>
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+    </div>
+
+    <div class="exam-section">
+      <div class="exam-section-header">
+        <h3>Soru 4 — Diyalogu Uygun Soruyla Tamamla</h3>
+        <span class="pts">20 puan</span>
+      </div>
+      <p style="margin-bottom:15px; color:#666; font-size:13px; direction:ltr;">Seçenekler: ( ما اسْمُهُ / ما اسْمُها / ما مِهْنَتُهُ / ما مِهْنَتُها )</p>
+      <div style="margin-bottom:20px;">
+        <div style="direction:ltr; font-size:14px; font-weight:700; color:#666; margin-bottom:6px;">1.</div>
+        <div style="font-size:19px; direction:rtl;">أ: <span class="dialogue-blank"></span> ؟</div>
+        <div style="font-size:19px; direction:rtl; padding-right:20px; margin-top:8px;">ب: اسْمُهُ أَحْمَد.</div>
+      </div>
+      <div>
+        <div style="direction:ltr; font-size:14px; font-weight:700; color:#666; margin-bottom:6px;">2.</div>
+        <div style="font-size:19px; direction:rtl;">أ: <span class="dialogue-blank"></span> ؟</div>
+        <div style="font-size:19px; direction:rtl; padding-right:20px; margin-top:8px;">ب: مِهْنَتُها مُعَلِّمَة.</div>
+      </div>
+    </div>
+
+    <div class="exam-section">
+      <div class="exam-section-header">
+        <h3>Soru 5 — Arapça Tam Cümleyle Cevap Ver</h3>
+        <span class="pts">20 puan</span>
+      </div>
+      <div style="font-size:20px; font-weight:700; direction:rtl; padding:14px 18px; background:#fff8f0; border-radius:10px; margin-bottom:8px;">
+        ما اسْمُ أَبيكَ وما مِهْنَتُهُ؟
+        <div style="font-size:12px; color:#888; font-weight:400; direction:ltr; margin-top:4px;">Babanın adı ne ve mesleği ne?</div>
+      </div>
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+
+      <div style="font-size:20px; font-weight:700; direction:rtl; padding:14px 18px; background:#fff8f0; border-radius:10px; margin-top:18px; margin-bottom:8px;">
+        ما اسْمُ أُمِّكَ وما مِهْنَتُها؟
+        <div style="font-size:12px; color:#888; font-weight:400; direction:ltr; margin-top:4px;">Annenin adı ne ve mesleği ne?</div>
+      </div>
+      <div class="answer-line"></div>
+      <div class="answer-line"></div>
+
+      <table class="score-table" style="margin-top:30px;">
+        <thead>
+          <tr><th>Soru</th><th>1. Soru</th><th>2. Soru</th><th>3. Soru</th><th>4. Soru</th><th>5. Soru</th><th>Toplam</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Puan</td><td>20</td><td>30</td><td>10</td><td>20</td><td>20</td><td>100</td></tr>
+          <tr><td>Alınan</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="answer-key">
+      <h2>🔑 Cevap Anahtarı — Yanıtlar</h2>
+      <div class="ans-section">
+        <h4>Soru 1 — Eşleştirme:</h4>
+        <div class="ans-item">أَبٌ ← Baba &nbsp;|&nbsp; أُمٌّ ← Anne &nbsp;|&nbsp; أَخٌ ← Erkek kardeş &nbsp;|&nbsp; أُخْتٌ ← Kız kardeş</div>
+      </div>
+      <div class="ans-section">
+        <h4>Soru 2 — Cinsiyet Dönüşümü:</h4>
+        <div class="ans-item">مُهَنْدِسَة ← مُهَنْدِس &nbsp;|&nbsp; مُعَلِّم ← مُعَلِّمَة &nbsp;|&nbsp; مُتَقاعِد ← مُتَقاعِدَة &nbsp;|&nbsp; طَبيبَة ← طَبيب &nbsp;|&nbsp; تاجِر ← تاجِرَة &nbsp;|&nbsp; مُوَظَّفَة ← مُوَظَّف</div>
+      </div>
+      <div class="ans-section">
+        <h4>Soru 3 — Çeviri:</h4>
+        <div class="ans-item">Babam öğretmendir.</div>
+      </div>
+      <div class="ans-section">
+        <h4>Soru 4 — Diyalog:</h4>
+        <div class="ans-item">1. ما اسْمُهُ؟ &nbsp;&nbsp;|&nbsp;&nbsp; 2. ما مِهْنَتُها؟</div>
+      </div>
+      <div class="ans-section">
+        <h4>Soru 5 — Model Cevap:</h4>
+        <div class="ans-item" style="direction:rtl; font-size:18px; font-weight:700; margin-bottom:6px;">اسْمُهُ أَحْمَد. هُوَ مُعَلِّم.</div>
+        <div class="ans-item" style="direction:rtl; font-size:18px; font-weight:700;">اسْمُها زَيْنَب. هِيَ مُعَلِّمَة.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+<script>
+function checkOption(el, type) {
+  const siblings = el.parentElement.querySelectorAll('.option');
+  siblings.forEach(s => s.classList.remove('correct','wrong'));
+  el.classList.add(type);
+}
+function revealAnswer(btn) {
+  const ans = btn.nextElementSibling;
+  ans.classList.toggle('visible');
+  btn.textContent = ans.classList.contains('visible') ? 'Gizle' : 'Cevabı Göster';
+}
+</script>
+</body>
+</html>
