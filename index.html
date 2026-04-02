@@ -126,6 +126,72 @@
 
   @media screen { .main-wrapper { max-width: 960px; margin: 0 auto; padding: 20px; } }
   @media print { body { background: white; } .page { box-shadow: none; margin: 0; border-radius: 0; } }
+
+  /* ===== MOBILE ===== */
+  @media (max-width: 600px) {
+    .main-wrapper { padding: 8px; }
+    .cover { padding: 24px 16px; min-height: auto; }
+    .cover h1 { font-size: 26px; }
+    .cover h2 { font-size: 17px; margin-bottom: 16px; }
+    .cover .school { padding: 12px 16px; margin-bottom: 16px; }
+    .cover .school p { font-size: 13px; }
+    .cover .topics { padding: 16px 18px; max-width: 100%; }
+    .cover .topics h3 { font-size: 15px; }
+    .cover .topics li { font-size: 13px; }
+    .page { margin: 12px 0; border-radius: 12px; }
+    .page-header { padding: 16px 18px; }
+    .page-header h2 { font-size: 15px; }
+    .page-header .q-number { font-size: 11px; padding: 4px 14px; }
+    .page-header .points { font-size: 11px; }
+    .page-body { padding: 16px; }
+    .explain-box { padding: 14px 16px; }
+    .explain-box h3 { font-size: 14px; }
+    .explain-box p { font-size: 13px; line-height: 1.8; }
+    .example-box { padding: 14px 16px; }
+    .rule-box { padding: 14px 16px; }
+    .rule-box h3 { font-size: 14px; }
+    .rule-box .formula { font-size: 14px; padding: 10px 14px; }
+    .rule-box p { font-size: 12px; }
+    .tip-box { padding: 12px 14px; }
+    .tip-box p { font-size: 12px; }
+    table thead th { padding: 9px 10px; font-size: 12px; }
+    table tbody td { padding: 9px 10px; font-size: 13px; }
+    .arabic-cell { font-size: 17px; }
+    .note-cell { font-size: 11px; }
+    .quiz-section { padding: 16px; margin-top: 20px; }
+    .quiz-section h2 { font-size: 15px; }
+    .quiz-q { padding: 14px; }
+    .quiz-q .q-text { font-size: 16px; }
+    .quiz-q .q-text-ltr { font-size: 13px; }
+    .options { grid-template-columns: 1fr; gap: 7px; }
+    .option { font-size: 14px; padding: 10px 12px; }
+    .fill-blank { width: 100%; font-size: 15px; }
+    .gender-row { gap: 10px; padding: 10px 12px; flex-wrap: wrap; }
+    .gender-ar { font-size: 18px; }
+    .gender-arrow { font-size: 18px; }
+    .student-info { grid-template-columns: 1fr; gap: 12px; }
+    .dialogue-blank { width: 140px; }
+    .exam-section { padding: 14px; }
+    .exam-section-header h3 { font-size: 13px; }
+    .exam-section-header .pts { font-size: 11px; }
+    .match-area { grid-template-columns: 1fr; gap: 15px; }
+    .answer-key { padding: 16px; }
+    .answer-key h2 { font-size: 15px; }
+    .answer-key .ans-item { font-size: 13px; word-break: break-word; }
+    .score-table th, .score-table td { padding: 6px 4px; font-size: 11px; }
+  }
+
+  /* ===== TABLET ===== */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .main-wrapper { padding: 14px; }
+    .cover h1 { font-size: 34px; }
+    .cover h2 { font-size: 20px; }
+    .page-body { padding: 24px; }
+    .page-header h2 { font-size: 18px; }
+    .options { grid-template-columns: 1fr 1fr; }
+    .student-info { grid-template-columns: 1fr 1fr; }
+    .arabic-cell { font-size: 19px; }
+  }
 </style>
 </head>
 <body>
